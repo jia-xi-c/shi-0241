@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background: linear-gradient(135deg, #d9f2e6, #f7fffb);
+            color: #2f4a3c;
+            text-align: center;
+        }
+
+        .page {
+            display: inline-block;
+            background-color: #E8FFF4;
+            box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+            text-align: left;
+            max-width: 720px;
+        }
+
+        /* 并集选择器：统一各级标题 */
+        h1, h2, h3, h4, h5, h6 {
+            color: #2f5d4b;
+            letter-spacing: 1px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        /* ID 选择器：只强调 id 为 intro 的段落 */
+        p#intro {
+            font-size: 140%;
+            font-weight: bold;
+            color: #c25a4a;
+            line-height: 1.8;
+        }
+
+        .intro-text {
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            background-color: #f4fffa;
+            font-size: 90%;
+        }
+
+        th {
+            background-color: #cdeedd;
+            font-weight: bold;
+            text-align: left;
+            line-height: 2.2;
+        }
+
+        td {
+            line-height: 2.0;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #e9f9f0;
+        }
+
+        table tr:hover {
+            background-color: #d3f0e2;
+        }
+
+        /* 后代选择器：只有 div 里的 table 里的链接才会被放大强调 */
+        div table a {
+            font-weight: bold;
+            font-size: 110%;
+            color: #a8473c;
+        }
+
+        /* 链接伪类 */
+        a:link {
+            color: #b6553b;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #7a7b52;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #e36a4c;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #3c4f9f;
+            text-decoration: underline;
+        }
+
+        /* 带类名的链接 */
+        a.red {
+            color: #d2694f;
+            font-weight: bold;
+        }
+
+        a.blue {
+            color: #3f7d6e;
+            font-weight: bold;
+        }
+
+        a.red:hover {
+            color: #b03a2e;
+        }
+
+        a.blue:hover {
+            color: #1f5a4c;
+        }
+
+        /* 伪元素：段落首字与 div 首行 */
+        p::first-letter {
+            font-size: 180%;
+            color: #3f8a6b;
+        }
+
+        div::first-line {
+            color: #2f5d4b;
+            font-weight: bold;
+        }
+
+        .notice {
+            font-size: 90%;
+            line-height: 1.7;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, rgba(47,93,75,0), rgba(47,93,75,0.6), rgba(47,93,75,0));
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- ① 顶部标题区 -->
+    <div class="center">
+        <h1>静夜灯下分享会 · Night Lamp Sharing</h1>
+    </div>
+
+    <div class="divider"></div><br>
+
+    <!-- ② 活动介绍区 -->
+    <div>
+        <h2 id="intro" class="center">今夜主题：一盏灯，一本好书</h2>
+
+        <p class="intro-text right">
+            当窗外的灯火一盏盏亮起，我们把书桌搬到灯下，让暖黄的光落在书页上。静夜灯下分享会邀请你带着最近读到的一段文字，与邻座的朋友轻声交换感受。
+        </p>
+
+        <p class="intro-text center">
+            现场备有书签、便签和温热的茶水。你可以把最喜欢的一句话写在便签上，贴进共享的夜读墙；也可以只是安静地听，等轮到自己时再慢慢开口。
+        </p>
+
+        <p class="intro-text">
+            上半场为自由阅读，下半场按桌轮流分享。没有固定的发言顺序，也不需要提前准备讲稿，带一本你愿意推荐的书来，就足够了。
+        </p>
+
+        <p id="intro">
+            重要提示：每场仅开放 24 个席位，请提前登记姓名与分享主题；活动当晚凭报名编号入场，迟到超过十五分钟的席位将顺延给现场候补的同学。
+        </p>
+    </div>
+
+    <br><div class="divider"></div><br>
+
+    <!-- ③ 活动报名信息表格区 -->
+    <div>
+        <h3 class="section-title">报名名单与分享主题</h3>
+
+        <table>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>分享主题</th>
+                <th>报名状态</th>
+                <th>详情</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td><a href="https://jia-xi-c.github.io/shi0241work2/shi-0241-work2.html">林晚</a></td>
+                <td>《小王子》里的孤独与驯养</td>
+                <td>已确认席位</td>
+                <td><a href="https://jia-xi-c.github.io/shi0241work2/shi-0241-work2.html">详情</a></td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>陈星野</td>
+                <td>村上春树短篇中的夜晚意象</td>
+                <td>已确认席位</td>
+                <td><a href="https://jia-xi-c.github.io/shi0241work2/shi-0241-work2.html">详情</a></td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td><a href="https://jia-xi-c.github.io/shi0241work2/shi-0241-work2.html">周予安</a></td>
+                <td>《月亮与六便士》的理想之光</td>
+                <td>待确认</td>
+                <td><a href="https://jia-xi-c.github.io/shi0241work2/shi-0241-work2.html">详情</a></td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>许知遥</td>
+                <td>散文集中的童年记忆</td>
+                <td>候补名单</td>
+                <td><a href="https://jia-xi-c.github.io/shi0241work2/shi-0241-work2.html">详情</a></td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>沈墨</td>
+                <td>《山海经》里的奇异世界</td>
+                <td>已确认席位</td>
+                <td><a href="https://jia-xi-c.github.io/shi0241work2/shi-0241-work2.html">详情</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <br><div class="divider"></div><br>
+
+    <!-- ④ 页面链接区 -->
+    <div class="center">
+        <div>
+            <a class="red" href="https://hongchenwusdnu.github.io/bookstore/job4.html">查看往期活动照片</a><br>
+            <a class="blue" href="https://jia-xi-c.github.io/shi0241work2/shi-0241-work2.html">在线咨询活动详情</a>
+        </div>
+    </div>
+
+    <br><div class="divider"></div><br>
+
+    <!-- ⑤ 底部公告区 -->
+    <div class="notice">
+        活动地点：静夜路 18 号二楼灯下书房，从地铁二号线“文化宫站”C 口出后步行约五分钟。<br>
+        活动时间：每周五 19:00 - 21:00，签到从 18:40 开始，请尽量提前到场选座。<br>
+        温馨提醒：现场灯光柔和，请爱护公共书籍；如需代留座位，请在报名时备注同行者姓名。<br>
+        更多安排将在活动前一天通过报名时填写的联系方式通知，请留意消息。
+    </div>
+
+    <br>
+
+</div>
+
+</body>
+</html>
